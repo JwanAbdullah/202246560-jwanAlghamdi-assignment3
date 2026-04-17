@@ -1,28 +1,23 @@
-# Technical Documentation – Assignment 2
+# Technical Documentation – Assignment 3
 
 ## 1. Overview
 
-This project is an enhanced version of the personal portfolio developed in Assignment 1.
-It is built using React and Vite, with a focus on improving interactivity, user experience, and modern web practices.
+This project is an advanced version of the personal portfolio developed in Assignments 1 and 2.
 
-The application showcases my background, experience, projects, and skills through modular components, while introducing dynamic features, improved styling, and better user interaction.
+It is built using React and Vite, with a focus on implementing advanced functionality such as API integration, complex logic, state management, and performance optimization.
 
-Compared to Assignment 1, this version includes:
-
-Interactive UI elements
-Dynamic content rendering
-Theme persistence using localStorage
-
+The application showcases personal information, experience, projects, and skills through modular components, while providing dynamic and interactive features.
 
 ---
 
 ## 2. Technologies Used
 
-- React (Functional Components)
+- React (Functional Components & Hooks)
 - Vite (Build tool and development server)
 - JavaScript (ES6+)
-- CSS (Flexbox and transitions)
-- LocalStorage (for theme persistence)
+- CSS (Flexbox, Grid, Transitions)
+- GitHub API (data fetching)
+- LocalStorage (state persistence)
 
 ---
 
@@ -36,6 +31,7 @@ src/
 │   ├── About.jsx
 │   ├── Experience.jsx
 │   ├── Projects.jsx
+│   ├── GithubRepos.jsx
 │   ├── Skills.jsx
 │   ├── Contact.jsx
 │   └── Footer.jsx
@@ -44,149 +40,132 @@ src/
 │   └── images/
 │       ├── aic.png
 │       ├── kfupm-gpt.png
-│       └── kommute.png
+│       ├── kommute.png
+│       ├── sage.png
+│       └── reserve.png
 │
 ├── App.jsx
 ├── App.css
 └── main.jsx
 ```
 
-- `main.jsx` initializes and renders the React application.
-- `App.jsx` serves as the root component and renders all sections.
-- `components/` contains reusable UI sections.
-- `assets/images/` stores project images.
-- `App.css` contains global styles, theme-related styles, and hover animations.
+- `main.jsx` initializes the application
+- `App.jsx` renders all sections
+- `components/` contains modular UI sections
+- `GithubRepos.jsx` handles API integration
+- `App.css` contains global styling and themes
 
-Each section of the portfolio is implemented as a separate React component for modularity and maintainability
 
 
 ---
+
 
 ## 4. Components Architecture
 
-- **Navbar** – Navigation between page sections.
-- **About** – Introduction and personal summary.
-- **Experience** – Displays experience cards using dynamic rendering.
-- **Projects** – Displays project cards with images and descriptions.
-- **Skills** – Presents skills in a structured and visual format.
-- **Contact** – Includes a front-end contact form.
-- **Footer** – Contains closing information and links.
+- **Navbar** – Navigation and theme toggle
+- **About** – Personal introduction and visitor state
+- **Experience** – Displays experience dynamically
+- **Projects** – Includes filtering and sorting logic
+- **GithubRepos** – Fetches and displays API data
+- **Skills** – Displays skills with visual indicators
+- **Contact** – Form with user interaction
+- **Footer** – Additional links and information
 
-Dynamic rendering is implemented using `.map()` to avoid repetitive code and improve scalability
-
----
-
-## 5. Styling Approach
-
-The project primarily uses inline styling within React components 
-Global styles and hover effects are defined in `App.css`
-
-Flexbox is used for layout alignment:
-
-- `display: flex`
-- `justify-content: center`
-- `flex-wrap: wrap`
-- `gap`
-
-Hover effects are implemented using CSS transitions and transforms:
-
-- `transform`
-- `transition`
-- `box-shadow`
-
-These animations improve user interaction and the overall visuals
+Components are reusable and structured for maintainability.
 
 ---
 
-## 6. Interactivity (Assignment 2 Requirement)
+## 5. API Integration
 
+The application integrates the GitHub API to fetch repositories dynamically.
 
-The application includes several interactive features:
+- Uses `fetch()` to retrieve repository data
+- Displays latest repositories in the UI
+- Includes loading and error handling states
 
-### Navbar Navigation
-- The Navbar allows users to navigate between different sections of the page using anchor links.
-- Smooth scrolling enhances the navigation experience.
-
-
-### Theme Toggle (Dynamic Content + localStorage)
-- Users can switch between dark and light mode using a button in the Navbar.
-- The selected theme is stored in `localStorage` and persists across sessions.
-
-### Contact Form Interaction
-- The contact form prevents default submission behavior.
-- Displays a success message after submission.
-- Automatically clears the form and hides the message after a few seconds.
-
-### Dynamic Rendering
-- Skills, projects, and experience sections are generated dynamically using `.map()`.
-
-These features improve usability and make the website more interactive.
-
+This ensures the content remains dynamic and up-to-date.
 
 ---
 
-## 7. Data Handling
+## 6. Complex Logic
 
-Basic data handling is implemented using:
+The Projects section implements filtering and sorting logic:
 
-### LocalStorage
-- Stores user theme preference (`light` or `dark`)
-- Ensures consistency across page reloads
+- Users can filter projects by category (AI, Web, Desktop)
+- Users can sort projects by name or year
+- Logic combines multiple conditions and updates UI dynamically
 
-### Form Handling
-- The contact form validates required fields using HTML attributes
-- Displays a confirmation message upon submission
-
-User feedback is provided through visible success messages.
+`useMemo` is used to optimize performance by recalculating data only when dependencies change.
 
 ---
 
-## 8. Animation and Transitions
+## 7. State Management
 
-The application includes lightweight animations to improve UX:
+State is managed using React hooks:
 
-- Hover animations on cards using `transform` and `box-shadow`
-- Smooth transitions for interactive elements
-- Animated UI elements such as skill progress lines
+- `useState` for user selections (filtering, sorting, theme)
+- `useEffect` for loading persistent data
+- `localStorage` to store:
+  - theme preference
 
-Animations are subtle and designed to enhance usability without distraction.
-
----
-
-## 9. Error Handling and User Feedback
-
-Basic user feedback is implemented:
-
-- Required fields prevent empty form submission
-- Success message confirms form submission
-- Visual feedback through hover effects
-
-This ensures users understand system responses clearly.
+This ensures data persistence and dynamic updates.
 
 ---
 
-## 10. Improvements from Assignment 1
+## 8. Performance Optimization
 
-- Added theme toggle with persistence (localStorage)
-- Improved skills section with progress visualization
-- Enhanced UI with animations and transitions
-- Improved component structure and readability
-- Added better user feedback in the contact form
+The application includes several performance improvements:
 
----
+- Optimized image sizes for faster loading
+- Removed unused code and redundant styles
 
-## 11. Limitations
-
-- Contact form is front-end only and not connected to a backend
-- No API integration is implemented
-- Validation is limited to basic HTML requirements
+Performance was tested using browser tools such as Lighthouse.
 
 ---
 
-## 12. Future Improvements
+## 9. User Interaction
 
-- Integrate backend service for contact form
-- Add filtering or search functionality
-- Fetch data from external APIs
+The application includes interactive features:
+
+- Theme toggle with persistent state
+- Project filtering and sorting controls
+- Dynamic GitHub data display
+- Contact form interaction
+
+These features improve usability and responsiveness.
+
+---
+
+## 10. Error Handling & Feedback
+
+- API errors are handled with fallback messages
+- Loading states inform the user during data fetching
+- Contact form provides success feedback
+- Input validation prevents incorrect data submission
+
+---
+
+## 11. Improvements from Assignment 2
+
+- Added GitHub API integration
+- Implemented filtering and sorting logic
+- Improved state management with persistent data
+- Enhanced performance and loading behavior
+- Refined UI and user experience
+
+---
+
+## 12. Limitations
+
+- API usage is limited to GitHub
+- Some features are simplified for demonstration purposes
+
+---
+
+## 13. Future Improvements
+
+- Connect contact form to a backend service
+- Add search functionality for projects
 - Improve accessibility (ARIA, keyboard navigation)
-- Add routing for multi-page navigation
+- Add more advanced API integrations
+- Enhance UI animations and responsiveness

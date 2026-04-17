@@ -1,23 +1,24 @@
-# AI Usage Report – Assignment 2
+# AI Usage Report – Assignment 3
 
 ## 1. Tools Used & Use Cases
 
 ### GitHub Copilot
-GitHub Copilot was used for code completion and small code suggestions while writing React components.  
-It helped with:
+GitHub Copilot was used occasionally for code completion and speeding up repetitive tasks.  
+It mainly helped with:
 
 - Autocompleting JSX structure
-- Suggesting repetitive style patterns
-- Speeding up writing of map functions and component layouts
+- Writing repetitive patterns such as `.map()` rendering
+- Suggesting small syntax improvements
 
-### Claude (AI Assistant)
-Claude was used for problem-solving and debugging support. It was mainly used to:
+### ChatGPT (AI Assistant)
+ChatGPT was used as a support tool for problem-solving and clarification. It was mainly used to:
 
-- Fix layout alignment issues
-- Improve hover animations and UI interactions
-- Refine component structure
-- Improve wording for project and experience descriptions
-- Assist in writing documentation
+- Get guidance on implementing GitHub API integration
+- Understand how to structure filtering and sorting logic
+- Troubleshoot layout and styling issues when needed
+- Improve wording in documentation
+
+AI was not used to generate full solutions, but rather to guide the development process.
 
 ---
 
@@ -25,41 +26,50 @@ Claude was used for problem-solving and debugging support. It was mainly used to
 
 ### Benefits
 
-AI tools significantly improved development efficiency and reduced debugging time.  
-GitHub Copilot helped speed up coding, while Claude provided structured explanations and solutions to problems.
+AI tools helped improve efficiency by providing quick suggestions and explanations.  
+They were useful for:
 
-AI was particularly useful in resolving styling conflicts, improving UI consistency, and refining the overall user experience.
+- Understanding how to approach certain features (such as API integration)
+- Debugging specific issues
+- Improving overall code clarity
 
+Most of the implementation was done manually, with AI used to support decision-making and problem-solving.
 
 ### Challenges
 
-One challenge was that AI required detailed and specific context to provide accurate solutions.  
-When insufficient context was provided, some suggestions conflicted with the existing code structure and occasionally caused layout issues.
+AI suggestions were not always directly usable and often required adjustments.  
+In some cases:
 
-This required careful review, testing, and sometimes rewriting parts of the suggested code.
+- Suggestions did not match the project structure
+- Extra changes were needed to integrate them properly
+- Some responses required simplification to ensure full understanding
+
+This required reviewing, testing, and adapting all suggestions before using them.
 
 ---
 
 ## 3. Learning Outcomes
 
-Through using AI tools, I learned how to:
+Through this assignment, I learned how to:
 
-- Debug layout and styling issues more systematically
-- Structure React components more cleanly
-- Apply CSS transitions and hover effects more effectively
-- Communicate technical problems more clearly by providing proper context
+- Implement API integration and handle asynchronous data
+- Design filtering and sorting logic using conditions and state
+- Manage application state using React hooks
+- Optimize performance using techniques such as memoization
+- Structure components in a clean and maintainable way
 
-Although core concepts were learned through coursework, AI helped reinforce and apply those concepts in practical development.
+AI helped support the learning process, but the implementation and understanding were developed independently.
 
 ---
 
 ## 4. Responsible Use & Modifications
 
-All AI-generated content was carefully reviewed, tested, and modified before being integrated into the project.  
+All AI-assisted suggestions were reviewed and modified before being included in the project.  
 
 I ensured that:
-- I understood the logic behind each implementation
-- The code matched the existing structure and design requirements
-- No unmodified AI-generated code was submitted without review
 
-AI was used as a support tool to enhance learning and productivity, not as a replacement for understanding.
+- I understood the purpose and logic of each feature
+- The code was rewritten or adjusted to match my own structure
+- No AI-generated solution was used without verification
+
+AI was used as a learning aid and support tool, not as a substitute for my own work.
