@@ -5,7 +5,7 @@ function About() {
     <header id="about" className="about">
       <h1 className="about__name">Jwan Alghamdi</h1>
       <p className="about__tagline">
-        Junior Software Engineering Student | AI Enthusiast
+        Junior Software Engineering Student | Data Science & Analytics Concentration
       </p>
       <p className="about__bio">
         Passionate about building innovative solutions and learning new

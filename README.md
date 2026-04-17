@@ -1,42 +1,57 @@
-# Assignment 2 – Interactive Portfolio Enhancements
+# Assignment 3 – Advanced Functionality Portfolio
 
 ## 📌 Project Description
 
-This project is an enhanced version of my personal portfolio website developed in Assignment 1.
+This project is an advanced version of my interactive portfolio website, building on Assignments 1 and 2.
 
-The goal of this assignment was to improve the portfolio by adding **interactive features**, **dynamic behavior**, and **modern web development techniques** using JavaScript.
+The goal of this assignment was to implement **advanced functionality**, including API integration, complex application logic, and improved state management, while maintaining a clean and modern user interface.
 
-The website now provides a more engaging user experience through interactive elements, improved feedback, and dynamic content updates based on user actions.
+The portfolio now provides a dynamic and interactive experience, showcasing projects, skills, and real-time data.
 
 ---
 
-## 🚀 Features 
+## 🚀 Features
 
-### 🔹 Interactivity
+### 🔹 API Integration
 
-* Dynamic section switching using buttons/tabs
-* Interactive elements responding to user actions (clicks, input)
+* Integrated GitHub API to fetch and display real-time repository data
+* Displays latest projects with dynamic updates
+* Includes loading and error handling for better user experience
 
-### 🔹 Dynamic Content
+---
 
-* Content updates based on user interaction (Switch between sections using buttons or tabs (e.g., About, Projects, Contact))
+### 🔹 Complex Logic
 
-### 🔹 Data Handling
+* Implemented project **filtering and sorting**
+  * Filter projects by category (AI, Web, Desktop)
+  * Sort projects by name or year
+* Combined multiple conditions to dynamically update displayed content
 
-* Displays confirmation or error messages based on input
-* Used localStorage to save user preferences (e.g., dark or light theme , name, settings)
+---
 
+### 🔹 State Management
 
-### 🔹 Animations & Transitions
+* Dark/Light mode toggle with persistence using `localStorage`
+* Project filtering and sorting using React state
 
-* Smooth transitions between sections
-* Hover effects on buttons and cards
+---
 
-### 🔹 User Feedback
+### 🔹 Performance Optimization
 
-* Error messages for invalid inputs
-* Clear messages for user actions
-* Improved usability and responsiveness
+* Optimized image sizes for faster loading
+* Used lazy loading for images
+* Removed unused code and improved CSS efficiency
+* Used `useMemo` to optimize rendering of filtered/sorted data
+* Tested performance using browser tools such as Lighthouse
+
+---
+
+### 🔹 UI & User Experience
+
+* Clean and responsive design
+* Interactive project section with dynamic updates
+* Smooth transitions and hover effects
+* Improved layout consistency and visual hierarchy
 
 ---
 
@@ -55,7 +70,7 @@ The website now provides a more engaging user experience through interactive ele
 To run this project locally:
 
 1. Clone the repository:
-   `https://github.com/JwanAbdullah/202246560-jwanAlghamdi-assignment2.git`
+   `https://github.com/JwanAbdullah/202246560-jwanAlghamdi-assignment3.git`
 
 2. Navigate into the project folder:
    `cd portfolio`
@@ -75,10 +90,10 @@ To run this project locally:
 
 AI tools were used during development to:
 
-* Generate and improve interactive features
-* Assist with debugging JavaScript functionality
-* Suggest UI/UX improvements for better user experience
-* Help structure components and logic
+* Assist in implementing API integration and data fetching
+* Help design filtering and sorting logic
+* Improve UI/UX design and layout structure
+* Support debugging and optimization
 
 All AI-generated content was reviewed, tested, and modified to ensure correctness and full understanding.
 
@@ -87,12 +102,13 @@ A detailed report is available in:
 
 ---
 
-## 📈 Improvements from Assignment 1
+## 📈 Improvements from Assignment 2
 
-* Added interactive JavaScript features
-* Improved user experience with animations and feedback
-* Implemented dynamic content handling
-* Enhanced overall usability and responsiveness
+* Added real-time API integration (GitHub repositories)
+* Implemented advanced filtering and sorting logic
+* Improved state management with persistent data
+* Enhanced performance and loading efficiency
+* Refined UI for a more professional portfolio experience
 
 ---
 
