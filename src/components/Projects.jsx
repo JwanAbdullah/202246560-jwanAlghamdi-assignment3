@@ -112,6 +112,7 @@ function Projects() {
                 src={project.image}
                 className="project-card__image"
                 alt={project.title}
+                loading="lazy"
               />
               <h3 className="card__heading">{project.title}</h3>
               <p className="card__year">
