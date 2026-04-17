@@ -256,7 +256,50 @@ body.light .navbar {
 body.light .project-card__image {
   background: #808bad;
 }
+.projects__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
 
+.projects__filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.projects__filter {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.projects__filter:hover {
+  background: var(--surface-hover);
+}
+
+.projects__filter.active {
+  background: var(--accent);
+  color: #111827;
+  border-color: transparent;
+}
+
+.projects__sort {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
 /* Skills */
 .skills-grid-2 {
   display: grid;
